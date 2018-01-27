@@ -27,7 +27,6 @@ def match_ends(words):
     for word in words:
         if len(word) >= 2 and word[0] == word[-1]:
             matched += 1
-            # print('matches first and last ', word)
     return matched
 
 # B. front_x
