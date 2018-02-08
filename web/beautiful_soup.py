@@ -11,11 +11,8 @@ res.raise_for_status()
 
 html = bs(res.text, 'html.parser')
 titles = html.select('h3 a')
-print(titles[0])
+# print(titles[0])
 
-result = []
 for i in range(10):
-    txt = titles[i].text
-    result.append(txt)
-
-print(result)
+    txt = titles[i].get_text()
+    print(txt)
